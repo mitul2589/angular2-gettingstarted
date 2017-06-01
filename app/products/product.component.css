@@ -1,0 +1,11 @@
+thead {
+    color: red
+}
+table {
+    border: 1px solid black;
+}
+
+table tr td, table tr th {
+    border: 1px solid black;
+    padding: 5px;
+}
