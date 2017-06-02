@@ -9,3 +9,9 @@ table tr td, table tr th {
     border: 1px solid black;
     padding: 5px;
 }
+
+.productstar {
+    height: 18px;
+    overflow: hidden;
+    white-space: nowrap;
+}

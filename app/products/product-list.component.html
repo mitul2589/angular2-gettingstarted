@@ -1,5 +1,5 @@
-<div>{{pageTitle}}</div>
-<input type="text" [(ngModel)]='listFilter' />
+<h2>{{pageTitle}}</h2>
+<p>Filter: <input type="text" [(ngModel)]='listFilter' /></p>
 <br/> Filter by: {{listFilter}}
 
 {{errorMessage}}
@@ -25,13 +25,10 @@
             <td>{{product.code}}</td>
             <td>{{product.price | currency:'USD':true}}</td>
             <td>
-                <div style="height:18px; overflow: hidden" [style.width.px]='product.starrating'>
-                    <span class="glyphicon glyphicon-star"></span>
-                    <span class="glyphicon glyphicon-star"></span>
-                    <span class="glyphicon glyphicon-star"></span>
-                    <span class="glyphicon glyphicon-star"></span>
-                    <span class="glyphicon glyphicon-star"></span>
-                </div>
+                <star-rating 
+                    [rating]="product.star"
+                    (ratingClicked)="onRatingClicked($event)">
+                </star-rating>
             </td>
         </tr>
     </tbody>

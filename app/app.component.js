@@ -17,7 +17,7 @@ var AppComponent = (function () {
 AppComponent = __decorate([
     core_1.Component({
         selector: 'pm-app',
-        template: "\n        <nav class=\"navbar navbar-default\">\n        <div class=\"container-fluid\">\n            <ul class=\"nav navbar-nav\">\n            <li class=\"active\"><a [routerLink]=\"['/welcome']\">Welcome</a></li>\n            <li><a [routerLink]=\"['/products']\">Products List</a></li>\n            \n            </ul>\n        </div>\n        </nav>\n        <router-outlet></router-outlet>\n    ",
+        template: "\n        <nav class=\"navbar navbar-default\">\n        <div class=\"container-fluid\">\n            <ul class=\"nav navbar-nav\">\n            <li class=\"active\"><a [routerLink]=\"['/welcome']\">Welcome</a></li>\n            <li><a [routerLink]=\"['/products']\">Products List</a></li>\n            \n            </ul>\n        </div>\n        </nav>\n        <router-outlet></router-outlet>\n        \n    ",
         providers: [product_service_1.ProductService, product_guard_service_1.ProductDetailGuardService]
     })
 ], AppComponent);

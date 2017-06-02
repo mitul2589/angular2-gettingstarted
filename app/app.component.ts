@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { ProductService } from './products/product.service'
 import { ProductDetailGuardService } from './products/product-guard.service'
 
+
 @Component({
     selector: 'pm-app',
     template: `
@@ -15,6 +16,7 @@ import { ProductDetailGuardService } from './products/product-guard.service'
         </div>
         </nav>
         <router-outlet></router-outlet>
+        
     `,
     providers: [ProductService, ProductDetailGuardService] 
 })

@@ -1,8 +1,10 @@
 <div class="container">
-    {{pageTitle}}
-    <br/><br/>
+    <h3>{{pageTitle}}</h3>
     <div *ngIf='product'>
-        Product Name: {{product.name}}
+        <p>Product Name: {{product.name}}</p>
+        <p>Product Code: {{product.code}}</p>
+        <p>Product Price: {{product.price}}</p>
+        <p>Product Star: {{product.star}}</p>
     </div>
 </div>
 <button (click)="goBack()">back</button>

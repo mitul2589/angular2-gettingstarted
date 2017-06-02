@@ -20,7 +20,7 @@ var ProductDetailComponent = (function () {
     }
     ProductDetailComponent.prototype.ngOnInit = function () {
         var _this = this;
-        this.pageTitle = 'Product ' + this._route.snapshot.params['id'] + ' Detail';
+        this.pageTitle = 'Product Detail: ' + this._route.snapshot.params['id'];
         this._productService.getProduct(this._route.snapshot.params['id'])
             .subscribe(function (product) { return _this.product = product; }, function (error) { return _this.errorMessage = error; });
     };

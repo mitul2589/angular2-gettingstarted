@@ -29,10 +29,9 @@ var ProductListComponent = (function () {
         console.log("product list component initiated");
         this._productService.getProducts()
             .subscribe(function (productsArr) { return _this.products = productsArr; }, function (error) { return _this.errorMessage = error; });
-        for (var _i = 0, _a = this.products; _i < _a.length; _i++) {
-            var product = _a[_i];
-            product['starrating'] = product.star * 15;
-        }
+    };
+    ProductListComponent.prototype.onRatingClicked = function (message) {
+        this.pageTitle += message;
     };
     return ProductListComponent;
 }());

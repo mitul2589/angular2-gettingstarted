@@ -4,16 +4,16 @@
             "img": "http://is1.pens.com/is/image/NatPenVegas/LMM?$SQRTILE250$",
             "name": "Pen",
             "code": "001",
-            "price": 12.00,
-            "star": 4
+            "price": 11.00,
+            "star": 0.5
     },
     {
             "id": 2,
             "img": "http: //2.bp.blogspot.com/-U1AxVOg0LMI/T5GP2TKxFOI/AAAAAAAAAFk/2-Jjx143eaQ/s1600/pencil.gif",
             "name": "Pencil",
             "code": "002",
-            "price": 11.00,
-            "star": 5
+            "price": 12.00,
+            "star": 1
     },
     {
             "id": 3,
@@ -21,7 +21,7 @@
             "name": "Rubber",
             "code": "003",
             "price": 13.00,
-            "star": 3
+            "star": 2.5
     },
     {
             "id": 4,
@@ -29,7 +29,7 @@
             "name": "Sharpner",
             "code": "004",
             "price": 14.00,
-            "star": 2
+            "star": 3.5
     },
     {
             "id": 5,
@@ -37,6 +37,6 @@
             "name": "Stepler",
             "code": "005",
             "price": 15.00,
-            "star": 1
+            "star": 5
     }
 ]
