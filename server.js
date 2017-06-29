@@ -1,9 +1,12 @@
 var express = require('express');
 var app = express();
 var path = require('path');
-var mongo = require('mongoose');
+var mongoose = require('mongoose');
 var MongoClient = require('mongodb').MongoClient;
-var url = 'mongodb://localhost/admin';
+var url = 'mongodb://localhost/local';
+var Schema = mongoose.Schema;
+
+var Product = require(path.join(__dirname + '/app/models/product'));
 
 app.use(express.static(__dirname));
 app.get('/', function (req, res) {
@@ -14,25 +17,27 @@ app.get('/products', function (req, res) {
     res.sendFile(path.join(__dirname + '/index.html'));
 });
 
-app.get('/api/products', function (req, res) {
+app.get('/api/products/', function (req, res) {
     var parr = [];
-    MongoClient.connect(url, function(err, db) {
+    mongoose.connect(url, function(err, db) {
         if(err) {
             console.log("Error");
         } else {
             console.log("Connected...!!!!");
         }
-        var cursor = db.collection('products').find();
-    
-        cursor.each(function (err, doc) {
-            debugger;
-            if (doc !== null) {
-                parr.push(doc);
-            }
-            res.send(parr);
-        });
 
-       
+        Product.count((err, productsCount) => {
+            
+            if(err) {
+                console.log(err);
+            } else {
+                console.log("productsCount" + productsCount);
+            }
+
+            Product.find({}, (err, products) => {
+                res.json(products);      
+            });
+        });
     });
     
 });
